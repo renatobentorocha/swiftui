@@ -15,6 +15,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ForEach(["iPhone 8", "iPhone 11"], id: \.self) { device in
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: device)
+                )
+                .previewDisplayName(device)
+        }
+        
     }
 }
