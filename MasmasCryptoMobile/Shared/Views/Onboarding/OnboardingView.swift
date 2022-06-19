@@ -8,25 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State private var currentPage: Int = 0
-    
-    var pages = [
-        StepView(image: "StepOne"),
-        StepView(image: "StepTwo"),
-        StepView(image: "StepThree")
-    ];
-    
-    var headline = [
-        "Trade anytime anywhere",
-        "Save and invest at the same time",
-        "Transact fast and easy"
-    ]
-    
-    var subheadline = [
-        "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-        "3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-    ]
+    @ObservedObject private var vm = ViewModel()
     
     var body: some View {
         ZStack {
@@ -36,23 +18,19 @@ struct OnboardingView: View {
                 .ignoresSafeArea()
             
             VStack {
-                PageView(pages: pages, currentPage: $currentPage)
-                Text(headline[currentPage])
+                PageView(pages: vm.pages, currentPage: $vm.currentPage)
+                Text(vm.headline[vm.currentPage])
                     .foregroundColor(Color.white)
                     .font(.headline)
                 
-                Text(subheadline[currentPage])
+                Text(vm.subheadline[vm.currentPage])
                     .foregroundColor(Color.gray)
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
                     .padding()
                 
                 Button {
-                    if currentPage < pages.count - 1 {
-                        currentPage += 1
-                    } else {
-                        currentPage = 0
-                    }
+                    vm.nextPage()
                     
                 } label: {
                     Text("Next")
