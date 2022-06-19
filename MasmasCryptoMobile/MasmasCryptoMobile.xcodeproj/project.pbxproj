@@ -21,6 +21,10 @@
 		88E34E90285EAC9D00DE1B14 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */; };
 		88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E91285EB4D600DE1B14 /* PageViewController.swift */; };
 		88E34E93285EB4D600DE1B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E91285EB4D600DE1B14 /* PageViewController.swift */; };
+		88E69243285FB55500D45CBF /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E69242285FB55500D45CBF /* PageControl.swift */; };
+		88E69244285FB55500D45CBF /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E69242285FB55500D45CBF /* PageControl.swift */; };
+		88E69246285FB57300D45CBF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E69245285FB57300D45CBF /* PageView.swift */; };
+		88E69247285FB57300D45CBF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E69245285FB57300D45CBF /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,8 @@
 		88E34E85285EA3CA00DE1B14 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		88E34E91285EB4D600DE1B14 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		88E69242285FB55500D45CBF /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		88E69245285FB57300D45CBF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,6 @@
 				88E34E63285E83BA00DE1B14 /* ContentView.swift */,
 				88E34E64285E83BB00DE1B14 /* Assets.xcassets */,
 				88E34E80285E842700DE1B14 /* LaunchScreen.storyboard */,
-				88E34E91285EB4D600DE1B14 /* PageViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 		88E34E83285EA35800DE1B14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88E69241285FB4EE00D45CBF /* PageView */,
 				88E34E84285EA36800DE1B14 /* Onboarding */,
 			);
 			path = Views;
@@ -108,6 +114,16 @@
 				88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		88E69241285FB4EE00D45CBF /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				88E34E91285EB4D600DE1B14 /* PageViewController.swift */,
+				88E69242285FB55500D45CBF /* PageControl.swift */,
+				88E69245285FB57300D45CBF /* PageView.swift */,
+			);
+			path = PageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +228,11 @@
 			files = (
 				88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */,
 				88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */,
+				88E69243285FB55500D45CBF /* PageControl.swift in Sources */,
 				88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
 				88E34E8F285EAC9D00DE1B14 /* OnboardingView.swift in Sources */,
 				88E34E86285EA3CA00DE1B14 /* StepView.swift in Sources */,
+				88E69246285FB57300D45CBF /* PageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,9 +242,11 @@
 			files = (
 				88E34E75285E83BC00DE1B14 /* ContentView.swift in Sources */,
 				88E34E93285EB4D600DE1B14 /* PageViewController.swift in Sources */,
+				88E69244285FB55500D45CBF /* PageControl.swift in Sources */,
 				88E34E73285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
 				88E34E90285EAC9D00DE1B14 /* OnboardingView.swift in Sources */,
 				88E34E87285EA3CA00DE1B14 /* StepView.swift in Sources */,
+				88E69247285FB57300D45CBF /* PageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
