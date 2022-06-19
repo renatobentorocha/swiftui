@@ -15,12 +15,12 @@
 		88E34E77285E83BC00DE1B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E34E64285E83BB00DE1B14 /* Assets.xcassets */; };
 		88E34E81285E842700DE1B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E34E80285E842700DE1B14 /* LaunchScreen.storyboard */; };
 		88E34E82285E842700DE1B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E34E80285E842700DE1B14 /* LaunchScreen.storyboard */; };
-		88E34E86285EA3CA00DE1B14 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E85285EA3CA00DE1B14 /* StepOne.swift */; };
-		88E34E87285EA3CA00DE1B14 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E85285EA3CA00DE1B14 /* StepOne.swift */; };
-		88E34E89285EA3DB00DE1B14 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E88285EA3DB00DE1B14 /* StepTwo.swift */; };
-		88E34E8A285EA3DB00DE1B14 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E88285EA3DB00DE1B14 /* StepTwo.swift */; };
-		88E34E8C285EA3F100DE1B14 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E8B285EA3F100DE1B14 /* StepThree.swift */; };
-		88E34E8D285EA3F100DE1B14 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E8B285EA3F100DE1B14 /* StepThree.swift */; };
+		88E34E86285EA3CA00DE1B14 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E85285EA3CA00DE1B14 /* StepView.swift */; };
+		88E34E87285EA3CA00DE1B14 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E85285EA3CA00DE1B14 /* StepView.swift */; };
+		88E34E8F285EAC9D00DE1B14 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */; };
+		88E34E90285EAC9D00DE1B14 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */; };
+		88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E91285EB4D600DE1B14 /* PageViewController.swift */; };
+		88E34E93285EB4D600DE1B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E91285EB4D600DE1B14 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		88E34E6F285E83BC00DE1B14 /* MasmasCryptoMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasmasCryptoMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E34E71285E83BC00DE1B14 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		88E34E80285E842700DE1B14 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		88E34E85285EA3CA00DE1B14 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
-		88E34E88285EA3DB00DE1B14 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
-		88E34E8B285EA3F100DE1B14 /* StepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
+		88E34E85285EA3CA00DE1B14 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		88E34E91285EB4D600DE1B14 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +71,7 @@
 				88E34E63285E83BA00DE1B14 /* ContentView.swift */,
 				88E34E64285E83BB00DE1B14 /* Assets.xcassets */,
 				88E34E80285E842700DE1B14 /* LaunchScreen.storyboard */,
+				88E34E91285EB4D600DE1B14 /* PageViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -103,9 +104,8 @@
 		88E34E84285EA36800DE1B14 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				88E34E85285EA3CA00DE1B14 /* StepOne.swift */,
-				88E34E88285EA3DB00DE1B14 /* StepTwo.swift */,
-				88E34E8B285EA3F100DE1B14 /* StepThree.swift */,
+				88E34E85285EA3CA00DE1B14 /* StepView.swift */,
+				88E34E8E285EAC9D00DE1B14 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -211,10 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */,
+				88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */,
 				88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
-				88E34E89285EA3DB00DE1B14 /* StepTwo.swift in Sources */,
-				88E34E8C285EA3F100DE1B14 /* StepThree.swift in Sources */,
-				88E34E86285EA3CA00DE1B14 /* StepOne.swift in Sources */,
+				88E34E8F285EAC9D00DE1B14 /* OnboardingView.swift in Sources */,
+				88E34E86285EA3CA00DE1B14 /* StepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,10 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E34E75285E83BC00DE1B14 /* ContentView.swift in Sources */,
+				88E34E93285EB4D600DE1B14 /* PageViewController.swift in Sources */,
 				88E34E73285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
-				88E34E8A285EA3DB00DE1B14 /* StepTwo.swift in Sources */,
-				88E34E8D285EA3F100DE1B14 /* StepThree.swift in Sources */,
-				88E34E87285EA3CA00DE1B14 /* StepOne.swift in Sources */,
+				88E34E90285EAC9D00DE1B14 /* OnboardingView.swift in Sources */,
+				88E34E87285EA3CA00DE1B14 /* StepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
