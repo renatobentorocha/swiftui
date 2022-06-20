@@ -13,7 +13,7 @@ extension OnboardingView {
         
         private var model = OnboardingModel()
         
-        var pages: [StepView] {
+        var pages: [String] {
             model.pages
         }
         

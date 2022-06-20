@@ -9,9 +9,9 @@ import Foundation
 
 struct OnboardingModel {
     var pages = [
-        StepView(image: "StepOne"),
-        StepView(image: "StepTwo"),
-        StepView(image: "StepThree")
+        "StepOne",
+        "StepTwo",
+        "StepThree"
     ];
     
     var headline = [
