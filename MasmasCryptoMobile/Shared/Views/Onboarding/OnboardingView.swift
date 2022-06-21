@@ -18,7 +18,10 @@ struct OnboardingView: View {
                 .ignoresSafeArea()
             
             VStack {
-                PageView(pages: vm.pages.map {image in stepViewWith(image: image)}, currentPage: $vm.currentPage)
+                PageView(
+                    pages: vm.pages.map { image in stepViewWith(image: image)},
+                    currentPage: $vm.currentPage
+                )
                 Text(vm.headline[vm.currentPage])
                     .foregroundColor(Color.white)
                     .font(.headline)
@@ -39,7 +42,6 @@ struct OnboardingView: View {
                 .frame(width: 180, height: 54, alignment: .center)
                 .background(Color("OnboargingColor"))
                 .cornerRadius(16)
-
             }
             
         }

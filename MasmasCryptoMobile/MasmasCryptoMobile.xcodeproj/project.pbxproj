@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		888F146528615AF6006FBCD2 /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F146428615AF6006FBCD2 /* ReversingScale.swift */; };
 		88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */; };
 		88E34E73285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */; };
 		88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E63285E83BA00DE1B14 /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		888F146428615AF6006FBCD2 /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
 		88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasmasCryptoMobileApp.swift; sourceTree = "<group>"; };
 		88E34E63285E83BA00DE1B14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88E34E64285E83BB00DE1B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		888F146328615A6F006FBCD2 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				888F146428615AF6006FBCD2 /* ReversingScale.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		88E34E5C285E83B900DE1B14 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		88E34E61285E83BA00DE1B14 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				888F146328615A6F006FBCD2 /* Animation */,
 				88E34E83285EA35800DE1B14 /* Views */,
 				88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */,
 				88E34E63285E83BA00DE1B14 /* ContentView.swift */,
@@ -236,6 +247,7 @@
 			files = (
 				88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */,
 				88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */,
+				888F146528615AF6006FBCD2 /* ReversingScale.swift in Sources */,
 				88E69243285FB55500D45CBF /* PageControl.swift in Sources */,
 				88E69249285FD9FE00D45CBF /* OnboardingViewModel.swift in Sources */,
 				88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
