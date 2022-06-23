@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		888F146528615AF6006FBCD2 /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F146428615AF6006FBCD2 /* ReversingScale.swift */; };
+		88E1CD712862553B009C85CE /* IdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1CD702862553B009C85CE /* IdentificationView.swift */; };
+		88E1CD7428625825009C85CE /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1CD7328625825009C85CE /* UserDefaultConstants.swift */; };
 		88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */; };
 		88E34E73285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */; };
 		88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E34E63285E83BA00DE1B14 /* ContentView.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		888F146428615AF6006FBCD2 /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
+		88E1CD702862553B009C85CE /* IdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationView.swift; sourceTree = "<group>"; };
+		88E1CD7328625825009C85CE /* UserDefaultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
 		88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasmasCryptoMobileApp.swift; sourceTree = "<group>"; };
 		88E34E63285E83BA00DE1B14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88E34E64285E83BB00DE1B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		88E1CD6F286254FE009C85CE /* Identification */ = {
+			isa = PBXGroup;
+			children = (
+				88E1CD702862553B009C85CE /* IdentificationView.swift */,
+			);
+			path = Identification;
+			sourceTree = "<group>";
+		};
+		88E1CD72286257C8009C85CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				88E1CD7328625825009C85CE /* UserDefaultConstants.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		88E34E5C285E83B900DE1B14 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,7 @@
 		88E34E61285E83BA00DE1B14 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				88E1CD72286257C8009C85CE /* Data */,
 				888F146328615A6F006FBCD2 /* Animation */,
 				88E34E83285EA35800DE1B14 /* Views */,
 				88E34E62285E83BA00DE1B14 /* MasmasCryptoMobileApp.swift */,
@@ -118,6 +139,7 @@
 		88E34E83285EA35800DE1B14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88E1CD6F286254FE009C85CE /* Identification */,
 				88E69241285FB4EE00D45CBF /* PageView */,
 				88E34E84285EA36800DE1B14 /* Onboarding */,
 			);
@@ -247,8 +269,10 @@
 			files = (
 				88E34E74285E83BC00DE1B14 /* ContentView.swift in Sources */,
 				88E34E92285EB4D600DE1B14 /* PageViewController.swift in Sources */,
+				88E1CD7428625825009C85CE /* UserDefaultConstants.swift in Sources */,
 				888F146528615AF6006FBCD2 /* ReversingScale.swift in Sources */,
 				88E69243285FB55500D45CBF /* PageControl.swift in Sources */,
+				88E1CD712862553B009C85CE /* IdentificationView.swift in Sources */,
 				88E69249285FD9FE00D45CBF /* OnboardingViewModel.swift in Sources */,
 				88E34E72285E83BC00DE1B14 /* MasmasCryptoMobileApp.swift in Sources */,
 				88E6924C285FDCDE00D45CBF /* OnboardingModel.swift in Sources */,

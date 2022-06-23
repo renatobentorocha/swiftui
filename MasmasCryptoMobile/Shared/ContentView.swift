@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage(ONBOARDING_KEY) var passedOnboarding = false
+    
     var body: some View {
-        OnboardingView()
+        if passedOnboarding {
+            IdentificationView()
+                .transition(.scale)
+        } else {
+            OnboardingView()
+                .transition(.scale)
+        }
     }
 }
 

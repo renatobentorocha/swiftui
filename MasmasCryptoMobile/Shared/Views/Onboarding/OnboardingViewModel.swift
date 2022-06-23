@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension OnboardingView {
     class ViewModel: ObservableObject {
+        @AppStorage(ONBOARDING_KEY) var passedOnboarding = false
+        
         @Published var currentPage: Int = 0
         
         private var model = OnboardingModel()
@@ -29,7 +32,10 @@ extension OnboardingView {
             if currentPage < model.pages.count - 1 {
                currentPage += 1
             } else {
-                currentPage = 0
+                withAnimation {
+                    passedOnboarding.toggle()
+                }
+                
             }
         }
     }
