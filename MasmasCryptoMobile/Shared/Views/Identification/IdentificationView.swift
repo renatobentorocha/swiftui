@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+enum IdenticationType {
+    case signIn
+    case signOut
+}
+
 struct IdentificationView: View {
     @AppStorage(ONBOARDING_KEY) var passedOnboarding = false
+    @State private var identificationUsed: IdenticationType = .signIn
     
     var body: some View {
         GeometryReader { geometry in
@@ -22,14 +28,18 @@ struct IdentificationView: View {
                 }
                 
                 HStack {
-                    SignInButton()
-                    SignInButton()
+                    IdentificationButton(activated: identificationUsed == .signIn, title: "Sign in") {
+                        identificationUsed = .signIn
+                    }
+                    IdentificationButton(activated: identificationUsed == .signOut, title: "Sign out") {
+                        identificationUsed = .signOut
+                    }
                 }
                 .frame(width: geometry.size.width - 24)
                 .background(Color("#161C22"))
                 .cornerRadius(12)
                 
-                SignInView(geometry: geometry)
+                SignInView()
                 
             }
             .frame(width: geometry.size.width)
@@ -38,34 +48,25 @@ struct IdentificationView: View {
     }
 }
 
-struct SignInButton: View {
-    var body: some View {
-        Button {
-            
-        } label: {
-            Text("Sign in")
-                .foregroundColor(.white)
-        }
-        .frame(width: 179, height: 36)
-        .background(Color("BackgroundColor"))
-        .cornerRadius(12)
-        .padding(4)
-    }
-}
-
-struct SignInView: View {
-    var geometry: GeometryProxy
+struct IdentificationButton: View {
+    var activated: Bool
+    var title: String
+    var click: () -> Void
     
     var body: some View {
-        VStack(alignment: .center) {
-            HStack {
-                Text("Sign in")
-                    .font(.title)
-                    .foregroundColor(.white)
-                Spacer()
-            }
+        Button {
+            click()
+        } label: {
+            Text(title)
+                .foregroundColor(.white)
+                .frame(width: 179, height: 36)
+                
         }
-        .frame(width: geometry.size.width - 24)
+        .frame(width: 179, height: 36)
+        .background(activated ? Color("BackgroundColor") : nil)
+        .animation(.default, value: activated)
+        .cornerRadius(12)
+        .padding(4)
     }
 }
 
