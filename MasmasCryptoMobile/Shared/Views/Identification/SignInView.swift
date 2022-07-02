@@ -13,6 +13,7 @@ struct SignInView: View {
     var body: some View {
         VStack {
             Header()
+                .padding(.bottom, 20)
             EmailWithEmail(text: $email) {
             }
             Spacer()
