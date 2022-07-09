@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffeset: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -35,14 +37,7 @@ struct OnboardingView: View {
                 } //: Header
                 
                 ZStack {
-                    ZStack {
-                        Circle()
-                            .stroke(.white.opacity(0.2), lineWidth: 40)
-                            .frame(width: 260, height: 260, alignment: .center)
-                        Circle()
-                            .stroke(.white.opacity(0.2), lineWidth: 80)
-                            .frame(width: 260, height: 260, alignment: .center)
-                    }
+                    CircleGroupView(ShapeColor: .white, ShapeOpaciy: 0.2)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
@@ -66,10 +61,11 @@ struct OnboardingView: View {
                     HStack {
                         Capsule()
                             .fill(Color("ColorRed"))
-                            .frame(width: 80)
+                            .frame(width: buttonOffeset + 80)
                         Spacer()
                     }
                     
+                    // Button draggable
                     HStack {
                         ZStack {
                             Circle()
@@ -82,13 +78,32 @@ struct OnboardingView: View {
                         }
                         .foregroundColor(.white)
                         .frame(width: 80, height: 80, alignment: .center)
-                        .onTapGesture {
-                            isOnboardingViewActive = false
-                        }
+                        .offset(x: buttonOffeset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged{ gesture in
+                                    if gesture.translation.width > 0 && buttonOffeset <= buttonWidth - 80 {
+                                        buttonOffeset = gesture.translation.width
+                                    }
+                                }
+                                .onEnded { _ in
+                                    if buttonOffeset > buttonWidth / 2 {
+                                        withAnimation {
+                                            buttonOffeset = buttonWidth - 80
+                                            isOnboardingViewActive = false
+                                        }
+                                    } else {
+                                        withAnimation {
+                                            buttonOffeset = 0
+                                        }
+                                    }
+                                    
+                                }
+                        )
                         Spacer()
                     }
                 } //: Footer
-                .frame(height: 80, alignment: .center)
+                .frame(width: buttonWidth, height: 80, alignment: .center)
                 .padding()
             } // VStack
         } // ZStack
