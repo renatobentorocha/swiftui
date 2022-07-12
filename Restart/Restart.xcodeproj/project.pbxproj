@@ -16,6 +16,7 @@
 		88B3359B286FD0B000003772 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88B33599286FD0B000003772 /* chimeup.mp3 */; };
 		88B335A2286FD6B500003772 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B335A1286FD6B500003772 /* HomeView.swift */; };
 		88B335A4286FD6C800003772 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B335A3286FD6C800003772 /* OnboardingView.swift */; };
+		88F6C6AF287CE83600DF0E77 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6C6AE287CE83600DF0E77 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		88B335A0286FD53C00003772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		88B335A1286FD6B500003772 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		88B335A3286FD6C800003772 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		88F6C6AE287CE83600DF0E77 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		88B3359F286FD2F800003772 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				88F6C6AE287CE83600DF0E77 /* AudioPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				88B335A4286FD6C800003772 /* OnboardingView.swift in Sources */,
 				88B3358D286FCFCB00003772 /* ContentView.swift in Sources */,
 				88B3358B286FCFCB00003772 /* RestartApp.swift in Sources */,
+				88F6C6AF287CE83600DF0E77 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Restart;
+				PRODUCT_BUNDLE_IDENTIFIER = rocha.renato.Restart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -365,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Restart;
+				PRODUCT_BUNDLE_IDENTIFIER = rocha.renato.Restart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
