@@ -10,6 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
+    @State private var imageTranslate: CGSize = .zero
+    @State private var imageOffeset: CGSize = .zero
+    
+    func resetImageState() {
+        return withAnimation {
+            imageOffeset = .zero
+            imageTranslate = .zero
+            imageScale = 1
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -27,11 +37,35 @@ struct ContentView: View {
                         isAnimating.toggle()
                     }
                     .scaleEffect(imageScale)
+                    .offset(imageTranslate)
                     .onTapGesture(count: 2) {
-                        withAnimation(.spring()) {
-                            imageScale = imageScale == 1 ? 5 : 1
+                        if imageScale <= 1 {
+                            withAnimation(.spring()) {
+                                imageScale = 5
+                            }
+                        } else {
+                            resetImageState()
                         }
+                        
                     }
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                withAnimation {
+                                    imageTranslate = CGSize(width: value.translation.width + imageOffeset.width, height: value.translation.height + imageOffeset.height)
+                                }
+                            }
+                            .onEnded{ value in
+                                withAnimation {
+                                    imageOffeset = imageTranslate
+                                }
+                                
+                                if imageScale <= 1 {
+                                    resetImageState()
+                                }
+                            }
+                    )
+                    
             }
             .navigationTitle("Pinch && Zoom")
             .navigationBarTitleDisplayMode(.inline)
