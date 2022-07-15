@@ -71,12 +71,47 @@ struct ContentView: View {
             }
             .navigationTitle("Pinch && Zoom")
             .navigationBarTitleDisplayMode(.inline)
-            .overlay(
+            .overlay(alignment: .top) {
                 InfoPainelView(scale: imageScale, offset: imageTranslate)
                     .padding(.horizontal)
-                    .padding(.top, 30),
-                alignment: .top
-            )
+                    .padding(.top, 30)
+            }
+            .overlay(alignment: .bottom) {
+                Group {
+                    HStack {
+                        ControlButtonView(icon: "minus.magnifyingglass") {
+                            withAnimation(.spring()) {
+                                if imageScale > 1 {
+                                    imageScale -= 1
+                                    
+                                    if imageScale < 1 {
+                                        resetImageState()
+                                    }
+                                }
+                            }
+                        }
+                        ControlButtonView(icon: "arrow.up.left.and.down.right.magnifyingglass") {
+                            resetImageState()
+                        }
+                        ControlButtonView(icon: "plus.magnifyingglass") {
+                            withAnimation(.spring()) {
+                                if imageScale < 5 {
+                                    imageScale += 1
+                                    
+                                    if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                }
+                .padding(.bottom, 30)
+            }
         }
         .navigationViewStyle(.stack)
     }
